@@ -21,5 +21,4 @@ configure :build do
   # activate :smusher
 
   set :build_dir,  "."
-  set :http_prefix, '/testerize'
 end
