@@ -14,7 +14,7 @@ $ ->
     $('.overlay').show()
 
   $('.track_email').on 'click', (e) ->
-    return if $(e.currentTarget).trim().val() is ''
+    return if $(e.currentTarget)?.val().trim() is ''
 
     trackEmail($('.email').val())
     trackPrice(0)
