@@ -7,17 +7,24 @@ body
   height: 100%
 
 .pricing_option
+  +box-sizing(border-box)
+
   border-right: 1px dashed rgba(0, 0, 0, 0.1)
+  cursor: pointer
   display: inline-block
   min-height: 200px
   padding: 1em
   vertical-align: top
+  width: 33%
 
   &:last-child
     border-right: none
 
+  &:hover
+    background-color: #ddd
+
   &.active
-    +box-shadow(rgba(0, 0, 0, 0.2) 0 0 5px inset)
+    background-color: #ccc
 
   h3
     text-align: center
