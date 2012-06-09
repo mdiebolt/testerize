@@ -26,15 +26,14 @@ body {
     text-align: center; }
   /* line 25, pricing_plans.css.sass */
   .pricing_option ul {
-    list-style: none;
     padding-left: 20px; }
 
-/* line 29, pricing_plans.css.sass */
+/* line 28, pricing_plans.css.sass */
 section.add_email {
   padding: 1em;
   text-align: center; }
 
-/* line 33, pricing_plans.css.sass */
+/* line 32, pricing_plans.css.sass */
 input {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
