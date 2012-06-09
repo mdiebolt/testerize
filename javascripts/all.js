@@ -49,7 +49,8 @@
       return $('.overlay').show();
     });
     return $('.track_email').on('click', function(e) {
-      if ($(e.currentTarget).trim().val() === '') {
+      var _ref;
+      if (((_ref = $(e.currentTarget)) != null ? _ref.val().trim() : void 0) === '') {
         return;
       }
       trackEmail($('.email').val());
