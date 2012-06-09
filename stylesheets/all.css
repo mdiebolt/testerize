@@ -19,6 +19,27 @@
   /* line 18, pricing_plans.css.sass */
   .pricing_option ul {
     padding-left: 20px; }
+
+/* line 21, pricing_plans.css.sass */
+section.add_email {
+  padding: 1em;
+  text-align: center; }
+
+/* line 25, pricing_plans.css.sass */
+input {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 0 5px inset;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 0 5px inset;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 5px inset;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  display: inline;
+  padding: 9px 11px;
+  font-size: 14px;
+  width: 230px; }
 .highlight .hll { background-color: #49483e }
 .highlight  { background: #3A3C42; color: #f8f8f2 }
 .highlight .c { color: #75715e } /* Comment */
@@ -258,11 +279,12 @@ section {
   font-size: 15px;
   border-top: 1px solid #fff;
   background: -webkit-gradient(linear, 50% 0%, 50% 700, color-stop(0%, #fafafa), color-stop(100%, #dedede));
-  background: -webkit-linear-gradient(#fafafa, #dedede 700px);
-  background: -moz-linear-gradient(#fafafa, #dedede 700px);
-  background: -o-linear-gradient(#fafafa, #dedede 700px);
-  background: -ms-linear-gradient(#fafafa, #dedede 700px);
-  background: linear-gradient(#fafafa, #dedede 700px);
+  background: -webkit-linear-gradient(#fafafa, #dedede);
+  background: -moz-linear-gradient(#fafafa, #dedede);
+  background: -o-linear-gradient(#fafafa, #dedede);
+  background: -ms-linear-gradient(#fafafa, #dedede);
+  background: linear-gradient(#fafafa, #dedede);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   -webkit-border-radius: 0 0 8px 8px;
   -moz-border-radius: 0 0 8px 8px;
   -ms-border-radius: 0 0 8px 8px;

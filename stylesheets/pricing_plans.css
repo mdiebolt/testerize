@@ -19,3 +19,24 @@
   /* line 18, pricing_plans.css.sass */
   .pricing_option ul {
     padding-left: 20px; }
+
+/* line 21, pricing_plans.css.sass */
+section.add_email {
+  padding: 1em;
+  text-align: center; }
+
+/* line 25, pricing_plans.css.sass */
+input {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 0 5px inset;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 0 5px inset;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 5px inset;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  display: inline;
+  padding: 9px 11px;
+  font-size: 14px;
+  width: 230px; }
