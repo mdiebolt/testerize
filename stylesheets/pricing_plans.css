@@ -1,8 +1,12 @@
 /* line 3, pricing_plans.css.sass */
-html, body {
-  height: 100%; }
+html {
+  min-height: 100%; }
 
 /* line 6, pricing_plans.css.sass */
+body {
+  height: 100%; }
+
+/* line 9, pricing_plans.css.sass */
 .pricing_option {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -14,22 +18,22 @@ html, body {
   min-height: 200px;
   padding: 1em;
   vertical-align: top; }
-  /* line 15, pricing_plans.css.sass */
+  /* line 18, pricing_plans.css.sass */
   .pricing_option:last-child {
     border-right: none; }
-  /* line 18, pricing_plans.css.sass */
+  /* line 21, pricing_plans.css.sass */
   .pricing_option h3 {
     text-align: center; }
-  /* line 21, pricing_plans.css.sass */
+  /* line 24, pricing_plans.css.sass */
   .pricing_option ul {
     padding-left: 20px; }
 
-/* line 24, pricing_plans.css.sass */
+/* line 27, pricing_plans.css.sass */
 section.add_email {
   padding: 1em;
   text-align: center; }
 
-/* line 28, pricing_plans.css.sass */
+/* line 31, pricing_plans.css.sass */
 input {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
