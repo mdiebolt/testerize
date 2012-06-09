@@ -27,7 +27,6 @@ title: Testerize - Drop dead simple market discovery
       %h3
         Basic -
         %i $50 / month
-      %h4 Features
       %ul
         %li Create a product page in minutes
         %li Choose from beautiful stock templates
@@ -36,7 +35,6 @@ title: Testerize - Drop dead simple market discovery
       %h3
         Professional -
         %i $250 / month
-      %h4 Features
       %ul
         %li
           All features from
@@ -50,7 +48,6 @@ title: Testerize - Drop dead simple market discovery
       %h3
         Enterprise -
         %i Contact us
-      %h4 Features
       %ul
         %li
           All features from
@@ -61,10 +58,17 @@ title: Testerize - Drop dead simple market discovery
         %li Custom page templates
   %section.add_email
     %h3 Keep me up to date
-    %input(type='text' placeholder='email@address.com')
+    %input.email(type='email' placeholder='email@address.com')
+    %button.track_email Go
 
 %footer
   %p
     Brought to you by
     %a(href="http://pixieengine.com") PixieEngine
 
+.overlay
+.email_modal
+  %h3 Hey there
+  %p We're currently in a closed Beta. Sign up and you'll be the first to know about Testerize.
+  %input.email(type='email' placeholder='email@address.com')
+  %button.track_email Go
