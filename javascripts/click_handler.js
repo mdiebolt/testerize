@@ -29,6 +29,9 @@
       $(e.currentTarget).attr('class', 'pricing_option');
       return openModal();
     });
+    $("img").click(function() {
+      return openModal();
+    });
     return $('.track_email').on('click', function(e) {
       var input;
       input = $(this).prev();

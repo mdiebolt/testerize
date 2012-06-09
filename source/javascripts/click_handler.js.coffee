@@ -27,6 +27,9 @@ $ ->
     $(e.currentTarget).attr 'class', 'pricing_option'
     openModal()
 
+  $("img").click ->
+    openModal()
+
   $('.track_email').on 'click', (e) ->
     input = $(this).prev()
     return if $this?.val().trim() is ''
