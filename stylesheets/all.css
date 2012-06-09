@@ -1,3 +1,24 @@
+/* line 3, pricing_plans.css.sass */
+.pricing_option {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border-right: 1px dashed rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  min-height: 200px;
+  padding: 1em;
+  vertical-align: top; }
+  /* line 12, pricing_plans.css.sass */
+  .pricing_option:last-child {
+    border-right: none; }
+  /* line 15, pricing_plans.css.sass */
+  .pricing_option h3 {
+    text-align: center; }
+  /* line 18, pricing_plans.css.sass */
+  .pricing_option ul {
+    padding-left: 20px; }
 .highlight .hll { background-color: #49483e }
 .highlight  { background: #3A3C42; color: #f8f8f2 }
 .highlight .c { color: #75715e } /* Comment */
@@ -79,7 +100,7 @@ body {
 }
 
 .wrapper {
-  width: 640px;
+  width: 900px;
   margin: 0 auto;
   background: #DEDEDE;
   -webkit-border-radius: 8px;
@@ -142,7 +163,6 @@ header.without-description h1 {
 header p {
   margin: 0;
   color: #61778B;
-  width: 300px;
   font-size: 13px;
 }
 header p.view {
@@ -235,7 +255,6 @@ header ul a strong {
 }
 
 section {
-  padding: 15px 20px;
   font-size: 15px;
   border-top: 1px solid #fff;
   background: -webkit-gradient(linear, 50% 0%, 50% 700, color-stop(0%, #fafafa), color-stop(100%, #dedede));
@@ -345,7 +364,7 @@ hr {
 }
 
 footer {
-  width: 640px;
+  width: 900px;
   margin: 0 auto;
   padding: 20px 0 0;
   color: #ccc;
