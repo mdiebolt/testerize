@@ -1,0 +1,34 @@
+/* line 3, form.css.sass */
+.email_modal {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0 0 15px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.8) 0 0 15px;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0 15px;
+  background: #cccccc;
+  border: 3px solid rgba(0, 0, 0, 0.3);
+  display: none;
+  height: 150px;
+  margin: auto;
+  padding: 1em;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 400px;
+  z-index: 500; }
+
+/* line 21, form.css.sass */
+.overlay {
+  display: none;
+  position: fixed;
+  z-index: 499;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); }
