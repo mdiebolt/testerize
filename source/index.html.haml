@@ -23,7 +23,7 @@ title: Testerize - Drop dead simple market discovery
       Many companies will spend millions of dollars developing a product, only to find out that nobody wants it. We believe that it is far better to find out the market truth first. Explore new product lines quickly. The faster you locate demand the bigger your money making advantage becomes.
 
   %section
-    .pricing_option
+    .pricing_option(data-price=50)
       %h3
         Basic -
         %i $50 / month
@@ -31,7 +31,7 @@ title: Testerize - Drop dead simple market discovery
         %li Create a product page in minutes
         %li Choose from beautiful stock templates
 
-    .pricing_option
+    .pricing_option(data-price=250)
       %h3
         Professional -
         %i $250 / month
@@ -41,7 +41,7 @@ title: Testerize - Drop dead simple market discovery
         %li Track user interest
         %li Automatic funnel optimization
 
-    .pricing_option
+    .pricing_option(data-price=1000)
       %h3
         Enterprise -
         %i Contact us
@@ -52,7 +52,7 @@ title: Testerize - Drop dead simple market discovery
         %li Full market analysis report
   %section.add_email
     %h3 Keep me up to date
-    %input.email(type='email' placeholder='email@address.com')>
+    %input.email(data-price=0 type='email' placeholder='email@address.com')>
     %button.track_email Go
 
 %footer
@@ -64,5 +64,8 @@ title: Testerize - Drop dead simple market discovery
 .email_modal
   %h3 Hey there
   %p We're currently in a closed Beta. Sign up and you'll be the first to know about Testerize.
-  %input.email(type='email' placeholder='email@address.com')
+  %input.email(type='email' placeholder='email@address.com')>
   %button.track_email Go
+
+.thanks_message
+  Thanks for your interest. We'll be in touch soon.
