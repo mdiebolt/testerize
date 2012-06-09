@@ -8,32 +8,33 @@ body {
 
 /* line 9, pricing_plans.css.sass */
 .pricing_option {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
   border-right: 1px dashed rgba(0, 0, 0, 0.1);
   display: inline-block;
   min-height: 200px;
   padding: 1em;
   vertical-align: top; }
-  /* line 18, pricing_plans.css.sass */
+  /* line 16, pricing_plans.css.sass */
   .pricing_option:last-child {
     border-right: none; }
-  /* line 21, pricing_plans.css.sass */
+  /* line 19, pricing_plans.css.sass */
+  .pricing_option.active {
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px inset;
+    -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px inset;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px inset; }
+  /* line 22, pricing_plans.css.sass */
   .pricing_option h3 {
     text-align: center; }
-  /* line 24, pricing_plans.css.sass */
+  /* line 25, pricing_plans.css.sass */
   .pricing_option ul {
+    list-style: none;
     padding-left: 20px; }
 
-/* line 27, pricing_plans.css.sass */
+/* line 29, pricing_plans.css.sass */
 section.add_email {
   padding: 1em;
   text-align: center; }
 
-/* line 31, pricing_plans.css.sass */
+/* line 33, pricing_plans.css.sass */
 input {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
