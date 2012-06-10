@@ -12,18 +12,14 @@ do ->
   s = document.getElementsByTagName('script')[0]
   s.parentNode.insertBefore(ga, s)
 
-window.trackEmail = (email) ->
-  _gaq.push ['_setCustomVar',
-    1                # This custom var is set to slot #1.  Required parameter.
-    'Email Address'  # The name of the custom variable.  Required parameter.
-    email            # The value of the custom variable.  Required parameter.
-    1                # Sets the scope to visitor-level.  Optional parameter.
-  ]
-
-window.trackPrice = (price) ->
-  _gaq.push ['_setCustomVar',
-    2                # This custom var is set to slot #1.  Required parameter.
-    'Price Clicked'  # The name of the custom variable.  Required parameter.
-    price            # The value of the custom variable.  Required parameter.
-    1                # Sets the scope to visitor-level.  Optional parameter.
-  ]
+window.trackLead = (email, price) ->
+  $.ajax "http://pixieengine.com/leads/create",
+    dataType: "jsonp"
+    data:
+      lead:
+        product: "Testerize"
+        email: email
+        data:
+          price: price
+    success: (data) ->
+      # console.log(data)

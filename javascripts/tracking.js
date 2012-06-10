@@ -19,12 +19,20 @@
     return s.parentNode.insertBefore(ga, s);
   })();
 
-  window.trackEmail = function(email) {
-    return _gaq.push(['_setCustomVar', 1, 'Email Address', email, 1]);
-  };
-
-  window.trackPrice = function(price) {
-    return _gaq.push(['_setCustomVar', 2, 'Price Clicked', price, 1]);
+  window.trackLead = function(email, price) {
+    return $.ajax("http://pixieengine.com/leads/create", {
+      dataType: "jsonp",
+      data: {
+        lead: {
+          product: "Testerize",
+          email: email,
+          data: {
+            price: price
+          }
+        }
+      },
+      success: function(data) {}
+    });
   };
 
 }).call(this);

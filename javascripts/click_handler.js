@@ -33,13 +33,11 @@
       return openModal();
     });
     return $('.track_email').on('click', function(e) {
-      var input;
+      var email, input, price;
       input = $(this).prev();
-      if ((typeof $this !== "undefined" && $this !== null ? $this.val().trim() : void 0) === '') {
-        return;
-      }
-      trackEmail(input.val().trim());
-      trackPrice(input.data('price'));
+      email = input.val().trim();
+      price = input.data('price');
+      trackLead(email, price);
       input.val('');
       closeModal();
       return thanks();

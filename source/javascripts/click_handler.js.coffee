@@ -32,10 +32,11 @@ $ ->
 
   $('.track_email').on 'click', (e) ->
     input = $(this).prev()
-    return if $this?.val().trim() is ''
 
-    trackEmail input.val().trim()
-    trackPrice input.data('price')
+    email = input.val().trim()
+    price = input.data('price')
+
+    trackLead email, price
 
     input.val('')
     closeModal()
