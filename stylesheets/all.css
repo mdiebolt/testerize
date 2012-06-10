@@ -524,14 +524,10 @@ button {
     -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 5px inset;
     box-shadow: rgba(0, 0, 0, 0.15) 0 0 5px inset; }
 /* line 3, pricing_plans.css.sass */
-html {
-  min-height: 100%; }
-
-/* line 6, pricing_plans.css.sass */
-body {
+html, body {
   height: 100%; }
 
-/* line 9, pricing_plans.css.sass */
+/* line 6, pricing_plans.css.sass */
 .pricing_option {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -543,31 +539,31 @@ body {
   padding: 1em;
   vertical-align: top;
   width: 33%; }
-  /* line 20, pricing_plans.css.sass */
+  /* line 17, pricing_plans.css.sass */
   .pricing_option:last-child {
     border-right: none; }
-  /* line 23, pricing_plans.css.sass */
+  /* line 20, pricing_plans.css.sass */
   .pricing_option:hover {
     background-color: #dddddd; }
-  /* line 26, pricing_plans.css.sass */
+  /* line 23, pricing_plans.css.sass */
   .pricing_option.active {
     background-color: #cccccc; }
-  /* line 29, pricing_plans.css.sass */
+  /* line 26, pricing_plans.css.sass */
   .pricing_option h3 {
     text-align: center; }
-  /* line 32, pricing_plans.css.sass */
+  /* line 29, pricing_plans.css.sass */
   .pricing_option ul {
     padding-left: 20px; }
 
-/* line 35, pricing_plans.css.sass */
+/* line 32, pricing_plans.css.sass */
 section.add_email {
   padding: 0.5em;
   text-align: center; }
-  /* line 39, pricing_plans.css.sass */
+  /* line 36, pricing_plans.css.sass */
   section.add_email h3 {
     margin-bottom: 0.5em; }
 
-/* line 42, pricing_plans.css.sass */
+/* line 39, pricing_plans.css.sass */
 .thanks_message {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
