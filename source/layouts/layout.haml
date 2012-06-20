@@ -6,10 +6,7 @@
     %meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
     %title= data.page.title || "Testerize"
 
-    -if req.params['template']
-      = stylesheet_link_tag "templates/#{req.params['template']}"
-    -else
-      = stylesheet_link_tag "all"
+    = stylesheet_link_tag "all"
 
   %body
     = yield

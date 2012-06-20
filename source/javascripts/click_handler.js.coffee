@@ -1,4 +1,9 @@
 $ ->
+  if (template = window.location.search.split('=')[1])?
+    $('html').addClass("#{template}")
+  else
+    $('html').addClass('default')
+
   openModal = ->
     toggleModal(true)
 
