@@ -32,7 +32,7 @@ $ ->
     $(e.currentTarget).attr 'class', 'pricing_option'
     openModal()
 
-  $("img").click ->
+  $(".findOut, .radical").click ->
     openModal()
 
   $('.track_email').on 'click', (e) ->
