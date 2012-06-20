@@ -1,0 +1,104 @@
+/* line 3, templates/slate.css.sass */
+html {
+  font-family: "Myriad Pro"; }
+
+/* line 6, templates/slate.css.sass */
+body {
+  background-image: url(/images/stripe.png);
+  color: #222222;
+  margin: 0;
+  padding: 0; }
+
+/* line 12, templates/slate.css.sass */
+header {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #222222));
+  background: -webkit-linear-gradient(#444444, #222222 100%);
+  background: -moz-linear-gradient(#444444, #222222 100%);
+  background: -o-linear-gradient(#444444, #222222 100%);
+  background: -ms-linear-gradient(#444444, #222222 100%);
+  background: linear-gradient(#444444, #222222 100%);
+  color: white;
+  height: 150px; }
+  /* line 18, templates/slate.css.sass */
+  header h2 {
+    padding-top: 50px; }
+  /* line 21, templates/slate.css.sass */
+  header h2, header p {
+    margin: auto;
+    width: 800px; }
+
+/* line 25, templates/slate.css.sass */
+section {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  margin: auto;
+  width: 800px; }
+  /* line 30, templates/slate.css.sass */
+  section:last-child {
+    border-bottom: none; }
+
+/* line 33, templates/slate.css.sass */
+.pricing_option {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+  width: 250px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-top: 1em;
+  margin-right: 14px;
+  margin-bottom: 1em;
+  border-radius: 6px;
+  background-color: white;
+  padding: 0.5em;
+  display: inline-block; }
+  /* line 47, templates/slate.css.sass */
+  .pricing_option.active {
+    background-color: rgba(0, 0, 0, 0.1); }
+  /* line 50, templates/slate.css.sass */
+  .pricing_option h3 {
+    margin: 0; }
+  /* line 53, templates/slate.css.sass */
+  .pricing_option ul {
+    padding-left: 1em; }
+
+/* line 56, templates/slate.css.sass */
+.overlay {
+  display: none;
+  position: fixed;
+  z-index: 499;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); }
+
+/* line 66, templates/slate.css.sass */
+.thanks_message {
+  display: none; }
+
+/* line 69, templates/slate.css.sass */
+.email_modal {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0 0 15px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.8) 0 0 15px;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0 15px;
+  background: #eeeeee;
+  border: 3px solid rgba(0, 0, 0, 0.3);
+  display: none;
+  height: 200px;
+  margin: auto;
+  padding: 1em;
+  position: fixed;
+  top: 0;
+  bottom: 100px;
+  left: 0;
+  right: 0;
+  width: 275px;
+  z-index: 500; }
+  /* line 87, templates/slate.css.sass */
+  .email_modal button {
+    padding-top: 5px; }
