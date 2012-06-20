@@ -1,5 +1,5 @@
-/* line 3, form.css.sass */
-.email_modal {
+/* line 4, form.css.sass */
+.default .email_modal {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -21,12 +21,11 @@
   right: 0;
   width: 275px;
   z-index: 500; }
-  /* line 21, form.css.sass */
-  .email_modal button {
+  /* line 22, form.css.sass */
+  .default .email_modal button {
     padding-top: 5px; }
-
-/* line 24, form.css.sass */
-.overlay {
+/* line 25, form.css.sass */
+.default .overlay {
   display: none;
   position: fixed;
   z-index: 499;
@@ -35,9 +34,8 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5); }
-
-/* line 34, form.css.sass */
-input {
+/* line 35, form.css.sass */
+.default input {
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
   -ms-border-top-left-radius: 4px;
@@ -57,9 +55,8 @@ input {
   padding: 0.6em;
   font-size: 14px;
   width: 200px; }
-
-/* line 45, form.css.sass */
-button {
+/* line 46, form.css.sass */
+.default button {
   -moz-border-radius-topright: 5px;
   -webkit-border-top-right-radius: 5px;
   -ms-border-top-right-radius: 5px;
@@ -80,8 +77,8 @@ button {
   letter-spacing: 0.1em;
   margin: 0;
   padding: 3px 1em 7px 1em; }
-  /* line 59, form.css.sass */
-  button:active {
+  /* line 60, form.css.sass */
+  .default button:active {
     -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 5px inset;
     -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 5px inset;
     box-shadow: rgba(0, 0, 0, 0.15) 0 0 5px inset; }

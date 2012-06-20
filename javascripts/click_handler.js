@@ -1,7 +1,12 @@
 (function() {
 
   $(function() {
-    var closeModal, openModal, thanks, toggleModal;
+    var closeModal, openModal, template, thanks, toggleModal;
+    if ((template = window.location.search.split('=')[1]) != null) {
+      $('html').addClass("" + template);
+    } else {
+      $('html').addClass('default');
+    }
     openModal = function() {
       return toggleModal(true);
     };
@@ -29,7 +34,7 @@
       $(e.currentTarget).attr('class', 'pricing_option');
       return openModal();
     });
-    $("img").click(function() {
+    $(".findOut, .radical").click(function() {
       return openModal();
     });
     return $('.track_email').on('click', function(e) {

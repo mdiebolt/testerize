@@ -1,104 +1,183 @@
 /* line 3, templates/slate.css.sass */
-html {
+.slate {
   font-family: "Myriad Pro"; }
-
-/* line 6, templates/slate.css.sass */
-body {
-  background-image: url(/images/stripe.png);
-  color: #222222;
-  margin: 0;
-  padding: 0; }
-
-/* line 12, templates/slate.css.sass */
-header {
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #222222));
-  background: -webkit-linear-gradient(#444444, #222222 100%);
-  background: -moz-linear-gradient(#444444, #222222 100%);
-  background: -o-linear-gradient(#444444, #222222 100%);
-  background: -ms-linear-gradient(#444444, #222222 100%);
-  background: linear-gradient(#444444, #222222 100%);
-  color: white;
-  height: 150px; }
+  /* line 6, templates/slate.css.sass */
+  .slate h1 {
+    font-size: 2em; }
+  /* line 9, templates/slate.css.sass */
+  .slate h2 {
+    font-size: 1.5em; }
+  /* line 12, templates/slate.css.sass */
+  .slate h3 {
+    font-size: 1.2em; }
+  /* line 15, templates/slate.css.sass */
+  .slate h4 {
+    font-size: 1.1em; }
   /* line 18, templates/slate.css.sass */
-  header h2 {
-    padding-top: 50px; }
+  .slate h1, .slate h2, .slate h3, .slate h4, .slate h5, .slate h6 {
+    margin: 0; }
   /* line 21, templates/slate.css.sass */
-  header h2, header p {
+  .slate p {
+    margin: 0.5em 0; }
+  /* line 24, templates/slate.css.sass */
+  .slate body {
+    background-image: url(/images/stripe.png);
+    color: #222222;
+    margin: 0;
+    padding: 0; }
+  /* line 30, templates/slate.css.sass */
+  .slate header {
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #222222));
+    background: -webkit-linear-gradient(#444444, #222222 100%);
+    background: -moz-linear-gradient(#444444, #222222 100%);
+    background: -o-linear-gradient(#444444, #222222 100%);
+    background: -ms-linear-gradient(#444444, #222222 100%);
+    background: linear-gradient(#444444, #222222 100%);
+    color: white;
+    height: 130px; }
+    /* line 36, templates/slate.css.sass */
+    .slate header h1 {
+      padding-top: 50px; }
+    /* line 39, templates/slate.css.sass */
+    .slate header h1, .slate header p {
+      margin: auto;
+      width: 800px; }
+  /* line 43, templates/slate.css.sass */
+  .slate section {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     margin: auto;
     width: 800px; }
-
-/* line 25, templates/slate.css.sass */
-section {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-  margin: auto;
-  width: 800px; }
-  /* line 30, templates/slate.css.sass */
-  section:last-child {
-    border-bottom: none; }
-
-/* line 33, templates/slate.css.sass */
-.pricing_option {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  cursor: pointer;
-  width: 250px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  margin-top: 1em;
-  margin-right: 14px;
-  margin-bottom: 1em;
-  border-radius: 6px;
-  background-color: white;
-  padding: 0.5em;
-  display: inline-block; }
-  /* line 47, templates/slate.css.sass */
-  .pricing_option.active {
-    background-color: rgba(0, 0, 0, 0.1); }
-  /* line 50, templates/slate.css.sass */
-  .pricing_option h3 {
-    margin: 0; }
-  /* line 53, templates/slate.css.sass */
-  .pricing_option ul {
-    padding-left: 1em; }
-
-/* line 56, templates/slate.css.sass */
-.overlay {
-  display: none;
-  position: fixed;
-  z-index: 499;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); }
-
-/* line 66, templates/slate.css.sass */
-.thanks_message {
-  display: none; }
-
-/* line 69, templates/slate.css.sass */
-.email_modal {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0 0 15px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.8) 0 0 15px;
-  box-shadow: rgba(0, 0, 0, 0.8) 0 0 15px;
-  background: #eeeeee;
-  border: 3px solid rgba(0, 0, 0, 0.3);
-  display: none;
-  height: 200px;
-  margin: auto;
-  padding: 1em;
-  position: fixed;
-  top: 0;
-  bottom: 100px;
-  left: 0;
-  right: 0;
-  width: 275px;
-  z-index: 500; }
-  /* line 87, templates/slate.css.sass */
-  .email_modal button {
-    padding-top: 5px; }
+  /* line 48, templates/slate.css.sass */
+  .slate .pricing_option {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 250px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-top: 1em;
+    margin-right: 14px;
+    margin-bottom: 1em;
+    background-color: white;
+    padding: 0.5em;
+    display: inline-block; }
+    /* line 62, templates/slate.css.sass */
+    .slate .pricing_option:hover {
+      background-color: #dddddd; }
+    /* line 65, templates/slate.css.sass */
+    .slate .pricing_option:active {
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px inset;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px inset;
+      box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px inset; }
+    /* line 68, templates/slate.css.sass */
+    .slate .pricing_option h3 {
+      margin: 0;
+      text-align: center; }
+    /* line 72, templates/slate.css.sass */
+    .slate .pricing_option ul {
+      padding-left: 1em; }
+  /* line 75, templates/slate.css.sass */
+  .slate .overlay {
+    display: none;
+    position: fixed;
+    z-index: 499;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); }
+  /* line 85, templates/slate.css.sass */
+  .slate .thanks_message {
+    display: none; }
+  /* line 88, templates/slate.css.sass */
+  .slate .email_modal {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0 0 15px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.8) 0 0 15px;
+    box-shadow: rgba(0, 0, 0, 0.8) 0 0 15px;
+    background: #eeeeee;
+    border: 3px solid rgba(0, 0, 0, 0.3);
+    display: none;
+    height: 180px;
+    margin: auto;
+    padding: 1em;
+    position: fixed;
+    top: 0;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    width: 275px;
+    z-index: 500; }
+    /* line 106, templates/slate.css.sass */
+    .slate .email_modal button {
+      padding-top: 5px; }
+  /* line 109, templates/slate.css.sass */
+  .slate footer {
+    margin: auto;
+    width: 800px; }
+    /* line 113, templates/slate.css.sass */
+    .slate footer a {
+      color: #333333; }
+      /* line 116, templates/slate.css.sass */
+      .slate footer a:active, .slate footer a:visited {
+        color: #444444; }
+      /* line 119, templates/slate.css.sass */
+      .slate footer a:hover {
+        color: #666666; }
+  /* line 122, templates/slate.css.sass */
+  .slate input {
+    -moz-border-radius-topleft: 4px;
+    -webkit-border-top-left-radius: 4px;
+    -ms-border-top-left-radius: 4px;
+    -o-border-top-left-radius: 4px;
+    border-top-left-radius: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -ms-border-bottom-left-radius: 4px;
+    -o-border-bottom-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    display: inline;
+    padding: 0.6em;
+    font-size: 14px;
+    width: 200px; }
+  /* line 133, templates/slate.css.sass */
+  .slate button {
+    -moz-border-radius-topright: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -ms-border-top-right-radius: 5px;
+    -o-border-top-right-radius: 5px;
+    border-top-right-radius: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -ms-border-bottom-right-radius: 5px;
+    -o-border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #bbbbbb;
+    border: 2px solid rgba(0, 0, 0, 0.15);
+    border-left: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.1em;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    margin: 0;
+    padding: 3px 1em 7px 1em; }
+    /* line 147, templates/slate.css.sass */
+    .slate button:active {
+      -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 5px inset;
+      -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 5px inset;
+      box-shadow: rgba(0, 0, 0, 0.15) 0 0 5px inset; }
