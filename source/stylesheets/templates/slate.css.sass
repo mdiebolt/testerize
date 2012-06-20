@@ -3,6 +3,24 @@
 .slate
   font-family: 'Myriad Pro'
 
+  h1
+    font-size: 2em
+
+  h2
+    font-size: 1.5em
+
+  h3
+    font-size: 1.2em
+
+  h4
+    font-size: 1.1em
+
+  h1, h2, h3, h4, h5, h6
+    margin: 0
+
+  p
+    margin: 0.5em 0
+
   body
     background-image: url(/images/stripe.png)
     color: #222
@@ -13,12 +31,12 @@
     +background(linear-gradient(#444, #222 100%))
 
     color: #fff
-    height: 150px
+    height: 130px
 
-    h2
+    h1
       padding-top: 50px
 
-    h2, p
+    h1, p
       margin: auto
       width: 800px
 
@@ -31,6 +49,7 @@
       border-bottom: none
 
   .pricing_option
+    +border-radius(6px)
     +box-sizing(border-box)
 
     cursor: pointer
@@ -39,7 +58,6 @@
     margin-top: 1em
     margin-right: 14px
     margin-bottom: 1em
-    border-radius: 6px
     background-color: white
     padding: 0.5em
     display: inline-block
@@ -76,7 +94,7 @@
     background: #eee
     border: 3px solid rgba(0, 0, 0, 0.3)
     display: none
-    height: 200px
+    height: 180px
     margin: auto
     padding: 1em
     position: fixed

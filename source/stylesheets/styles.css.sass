@@ -1,13 +1,11 @@
+@import compass
+
 @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700)
 
 html.default
-  background: #6C7989
-  background: #6c7989 -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #6c7989), color-stop(100%, #434b55)) fixed
-  background: #6c7989 -webkit-linear-gradient(#6c7989, #434b55) fixed
-  background: #6c7989 -moz-linear-gradient(#6c7989, #434b55) fixed
-  background: #6c7989 -o-linear-gradient(#6c7989, #434b55) fixed
-  background: #6c7989 -ms-linear-gradient(#6c7989, #434b55) fixed
-  background: #6c7989 linear-gradient(#6c7989, #434b55) fixed
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNXG14zYAAAAUdEVYdENyZWF0aW9uIFRpbWUAMy82LzEygrTcTAAAAFRJREFUSIljfPDggZRf5RIGGNjUHsNATz6jXmSL1Kb2GLiAX+USBnrymRgGGDCORgFmoNAXjEbBaBSMRsFoFIxGwWgUjEbBaBSMRsFoFIxGwWgUAABYNujumib3wAAAAABJRU5ErkJggg==')
+
+  background-color: #6C7989
 
 .default
   body
@@ -16,20 +14,8 @@ html.default
     font: 14px / 1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif
     color: #555
     font-weight: 300
-    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNXG14zYAAAAUdEVYdENyZWF0aW9uIFRpbWUAMy82LzEygrTcTAAAAFRJREFUSIljfPDggZRf5RIGGNjUHsNATz6jXmSL1Kb2GLiAX+USBnrymRgGGDCORgFmoNAXjEbBaBSMRsFoFIxGwWgUjEbBaBSMRsFoFIxGwWgUAABYNujumib3wAAAAABJRU5ErkJggg==') fixed
-
-  .wrapper
     width: 900px
     margin: 0 auto
-    background: #DEDEDE
-    -webkit-border-radius: 8px
-    -moz-border-radius: 8px
-    -ms-border-radius: 8px
-    -o-border-radius: 8px
-    border-radius: 8px
-    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0 1px, rgba(0, 0, 0, 0.45) 0 3px 10px
-    -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0 1px, rgba(0, 0, 0, 0.45) 0 3px 10px
-    box-shadow: rgba(0, 0, 0, 0.2) 0 0 0 1px, rgba(0, 0, 0, 0.45) 0 3px 10px
 
   header, section, footer
     display: block
@@ -46,12 +32,12 @@ html.default
     color: #222
     font-weight: 700
 
-  header
-    -webkit-border-radius: 8px 8px 0 0
-    -moz-border-radius: 8px 8px 0 0
-    -ms-border-radius: 8px 8px 0 0
-    -o-border-radius: 8px 8px 0 0
-    border-radius: 8px 8px 0 0
+  section:not(.pitch)
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0 1px, rgba(0, 0, 0, 0.45) 0 3px 10px
+    -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0 1px, rgba(0, 0, 0, 0.45) 0 3px 10px
+    box-shadow: rgba(0, 0, 0, 0.2) 0 0 0 1px, rgba(0, 0, 0, 0.45) 0 3px 10px
+
+  .pitch
     background: #C6EAFA
     background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ddfbfc), color-stop(100%, #c6eafa))
     background: -webkit-linear-gradient(#ddfbfc, #c6eafa)
@@ -62,6 +48,25 @@ html.default
     position: relative
     padding: 15px 20px
     border-bottom: 1px solid #B2D2E1
+
+  header
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0 1px, rgba(0, 0, 0, 0.45) 0 3px 10px
+    -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0 1px, rgba(0, 0, 0, 0.45) 0 3px 10px
+    box-shadow: rgba(0, 0, 0, 0.2) 0 0 0 1px, rgba(0, 0, 0, 0.45) 0 3px 10px
+
+    +border-radius(8px 8px 0 0)
+
+    background: #C6EAFA
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ddfbfc), color-stop(100%, #c6eafa))
+    background: -webkit-linear-gradient(#ddfbfc, #c6eafa)
+    background: -moz-linear-gradient(#ddfbfc, #c6eafa)
+    background: -o-linear-gradient(#ddfbfc, #c6eafa)
+    background: -ms-linear-gradient(#ddfbfc, #c6eafa)
+    background: linear-gradient(#ddfbfc, #c6eafa)
+    position: relative
+    padding: 15px 20px
+    border-bottom: 1px solid #B2D2E1
+
     h1
       margin: 0
       padding: 0
@@ -153,7 +158,7 @@ html.default
           color: #fff
           -webkit-font-smoothing: antialiased
 
-  section
+  section:not(.pitch)
     font-size: 15px
     background: -webkit-gradient(linear, 50% 0%, 50% 700, color-stop(0%, #fafafa), color-stop(100%, #dedede))
     background: -webkit-linear-gradient(#fafafa, #dedede)
@@ -252,7 +257,6 @@ html.default
     width: 900px
     margin: 0 auto
     padding: 20px 0 0
-    color: #ccc
     overflow: hidden
     a
       color: #fff
