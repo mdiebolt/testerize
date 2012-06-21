@@ -252,28 +252,29 @@ html.default {
   margin: 0 0 20px; }
 /* line 240, styles.css.sass */
 .default footer {
+  color: #eeeeee;
   width: 900px;
   margin: 0 auto;
-  padding: 20px 0 0;
+  padding: 5px 0 0;
   overflow: hidden; }
-  /* line 245, styles.css.sass */
+  /* line 246, styles.css.sass */
   .default footer a {
     color: white;
     font-weight: bold; }
-  /* line 248, styles.css.sass */
+  /* line 249, styles.css.sass */
   .default footer p {
     float: left; }
-    /* line 250, styles.css.sass */
+    /* line 251, styles.css.sass */
     .default footer p + p {
       float: right; }
-  /* line 253, styles.css.sass */
+  /* line 254, styles.css.sass */
   .default footer .edit_toggle {
     float: right; }
 @media print, screen and (max-width: 740px) {
-  /* line 257, styles.css.sass */
+  /* line 258, styles.css.sass */
   .default body {
     padding: 0; }
-  /* line 259, styles.css.sass */
+  /* line 260, styles.css.sass */
   .default .wrapper {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
@@ -284,8 +285,9 @@ html.default {
     -moz-box-shadow: none;
     box-shadow: none;
     width: 100%; }
-  /* line 269, styles.css.sass */
+  /* line 270, styles.css.sass */
   .default footer {
+    color: white;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     -ms-border-radius: 0;
@@ -293,24 +295,24 @@ html.default {
     border-radius: 0;
     padding: 20px;
     width: auto; }
-    /* line 277, styles.css.sass */
+    /* line 279, styles.css.sass */
     .default footer p {
       float: none;
       margin: 0; }
-      /* line 280, styles.css.sass */
+      /* line 282, styles.css.sass */
       .default footer p + p {
         float: none; } }
 @media print, screen and (max-width:580px) {
-  /* line 285, styles.css.sass */
+  /* line 287, styles.css.sass */
   .default header ul {
     display: none; }
-  /* line 287, styles.css.sass */
+  /* line 289, styles.css.sass */
   .default header p {
     width: 100%; }
-    /* line 288, styles.css.sass */
+    /* line 290, styles.css.sass */
     .default header p.view {
       display: block; } }
 @media print {
-  /* line 293, styles.css.sass */
+  /* line 295, styles.css.sass */
   .default header small:before {
     content: "at http://github.com/"; } }

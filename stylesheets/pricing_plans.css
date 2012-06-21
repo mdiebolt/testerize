@@ -3,6 +3,16 @@
   height: 100%; }
 /* line 7, pricing_plans.css.sass */
 .default .pricing_option {
+  -moz-border-radius-bottomleft: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  -ms-border-bottom-left-radius: 8px;
+  -o-border-bottom-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  -moz-border-radius-bottomright: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  -ms-border-bottom-right-radius: 8px;
+  -o-border-bottom-right-radius: 8px;
+  border-bottom-right-radius: 8px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -12,29 +22,29 @@
   padding: 1em;
   vertical-align: top;
   width: 33%; }
-  /* line 17, pricing_plans.css.sass */
+  /* line 18, pricing_plans.css.sass */
   .default .pricing_option:last-child {
     border-right: none; }
-  /* line 20, pricing_plans.css.sass */
+  /* line 21, pricing_plans.css.sass */
   .default .pricing_option:hover {
     background-color: #dddddd; }
-  /* line 23, pricing_plans.css.sass */
+  /* line 24, pricing_plans.css.sass */
   .default .pricing_option.active {
     background-color: #cccccc; }
-  /* line 26, pricing_plans.css.sass */
+  /* line 27, pricing_plans.css.sass */
   .default .pricing_option h3 {
     text-align: center; }
-  /* line 29, pricing_plans.css.sass */
+  /* line 30, pricing_plans.css.sass */
   .default .pricing_option ul {
     padding-left: 20px; }
-/* line 32, pricing_plans.css.sass */
+/* line 33, pricing_plans.css.sass */
 .default section.add_email {
   padding: 0.5em;
   text-align: center; }
-  /* line 36, pricing_plans.css.sass */
+  /* line 37, pricing_plans.css.sass */
   .default section.add_email h3 {
     margin-bottom: 0.5em; }
-/* line 39, pricing_plans.css.sass */
+/* line 40, pricing_plans.css.sass */
 .default .thanks_message {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
