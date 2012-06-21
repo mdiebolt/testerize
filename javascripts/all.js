@@ -83,7 +83,7 @@
 
 }).call(this);
 (function() {
-  var contentMap, featuresMap, updateCopy, updateFeatures;
+  var contentMap, featureMap, updateCopy, updateFeatures;
 
   updateCopy = function(markdownText, selector) {
     return $(selector).html(markdown.toHTML(markdownText));
@@ -113,7 +113,7 @@
     '.edit .enterprise_plan': '.pricing_option .enterprise_plan'
   };
 
-  featuresMap = {
+  featureMap = {
     '.edit .basic_features': '.pricing_option .basic_plan',
     '.edit .professional_features': '.pricing_option .professional_plan',
     '.edit .enterprise_features': '.pricing_option .enterprise_plan'
@@ -125,7 +125,7 @@
     });
   });
 
-  $.each(featuresMap, function(source, destination) {
+  $.each(featureMap, function(source, destination) {
     return $(source).on('keyup', function(e) {
       return updateFeatures($(e.currentTarget).val().split(','), destination);
     });
@@ -134,6 +134,15 @@
   $('footer').on('click', '.edit_toggle', function(e) {
     e.preventDefault();
     return $('.edit').toggle();
+  });
+
+  $(function() {
+    $.each(contentMap, function(source, destination) {
+      return $(source).val($(destination).text().trim());
+    });
+    return $.each(featureMap, function(source, destination) {
+      return $(source).val($(destination).next().text().trim().replace(/\n\s*/g, ', '));
+    });
   });
 
 }).call(this);
