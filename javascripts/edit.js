@@ -1,96 +1,50 @@
 (function() {
+  var contentMap, featuresMap, updateCopy, updateFeatures;
 
-  $('.edit').on('keyup', '.title', function() {
-    var title;
-    title = $(this).val();
-    return $('header .title').text(title);
-  });
+  updateCopy = function(markdownText, selector) {
+    return $(selector).html(markdown.toHTML(markdownText));
+  };
 
-  $('.edit').on('keyup', '.paragraph1', function() {
-    var title;
-    title = $(this).val();
-    return $('.pitch .paragraph1').text(title);
-  });
-
-  $('.edit').on('keyup', '.paragraph2', function() {
-    var title;
-    title = $(this).val();
-    return $('.pitch .paragraph2').text(title);
-  });
-
-  $('.edit').on('keyup', '.paragraph2_header', function() {
-    var title;
-    title = $(this).val();
-    return $('.pitch .paragraph2_header').text(title);
-  });
-
-  $('.edit').on('keyup', '.paragraph3', function() {
-    var title;
-    title = $(this).val();
-    return $('.pitch .paragraph3').text(title);
-  });
-
-  $('.edit').on('keyup', '.paragraph3_header', function() {
-    var title;
-    title = $(this).val();
-    return $('.pitch .paragraph3_header').text(title);
-  });
-
-  $('.edit').on('keyup', '.basic_plan', function() {
-    var cost;
-    cost = $(this).val();
-    return $('.pricing_option .basic_plan').text(cost);
-  });
-
-  $('.edit').on('keyup', '.basic_features', function() {
-    var feature, features, li, _i, _len, _results;
-    features = $(this).val().split(',');
-    $('.pricing_option .basic_plan').next().empty();
+  updateFeatures = function(features, selector) {
+    var feature, li, _i, _len, _results;
+    $(selector).next().empty();
     _results = [];
     for (_i = 0, _len = features.length; _i < _len; _i++) {
       feature = features[_i];
       li = "<li>" + feature + "</li>";
-      _results.push($('.pricing_option .basic_plan').next().append(li));
+      _results.push($(selector).next().append(li));
     }
     return _results;
+  };
+
+  contentMap = {
+    '.edit .title': 'header .title',
+    '.edit .paragraph1': '.pitch .paragraph1',
+    '.edit .paragraph2': '.pitch .paragraph2',
+    '.edit .paragraph3': '.pitch .paragraph3',
+    '.edit .paragraph2_header': '.pitch .paragraph2_header',
+    '.edit .paragraph3_header': '.pitch .paragraph3_header',
+    '.edit .basic_plan': '.pricing_option .basic_plan',
+    '.edit .professional_plan': '.pricing_option .professional_plan',
+    '.edit .enterprise_plan': '.pricing_option .enterprise_plan'
+  };
+
+  featuresMap = {
+    '.edit .basic_features': '.pricing_option .basic_plan',
+    '.edit .professional_features': '.pricing_option .professional_plan',
+    '.edit .enterprise_features': '.pricing_option .enterprise_plan'
+  };
+
+  $.each(contentMap, function(source, destination) {
+    return $(source).on('keyup', function(e) {
+      return updateCopy($(e.currentTarget).val(), destination);
+    });
   });
 
-  $('.edit').on('keyup', '.professional_plan', function() {
-    var cost;
-    cost = $(this).val();
-    return $('.pricing_option .professional_plan').text(cost);
-  });
-
-  $('.edit').on('keyup', '.professional_features', function() {
-    var feature, features, li, _i, _len, _results;
-    features = $(this).val().split(',');
-    $('.pricing_option .professional_plan').next().empty();
-    _results = [];
-    for (_i = 0, _len = features.length; _i < _len; _i++) {
-      feature = features[_i];
-      li = "<li>" + feature + "</li>";
-      _results.push($('.pricing_option .professional_plan').next().append(li));
-    }
-    return _results;
-  });
-
-  $('.edit').on('keyup', '.enterprise_plan', function() {
-    var cost;
-    cost = $(this).val();
-    return $('.pricing_option .enterprise_plan').text(cost);
-  });
-
-  $('.edit').on('keyup', '.enterprise_features', function() {
-    var feature, features, li, _i, _len, _results;
-    features = $(this).val().split(',');
-    $('.pricing_option .enterprise_plan').next().empty();
-    _results = [];
-    for (_i = 0, _len = features.length; _i < _len; _i++) {
-      feature = features[_i];
-      li = "<li>" + feature + "</li>";
-      _results.push($('.pricing_option .enterprise_plan').next().append(li));
-    }
-    return _results;
+  $.each(featuresMap, function(source, destination) {
+    return $(source).on('keyup', function(e) {
+      return updateFeatures($(e.currentTarget).val().split(','), destination);
+    });
   });
 
   $('footer').on('click', '.edit_toggle', function(e) {
