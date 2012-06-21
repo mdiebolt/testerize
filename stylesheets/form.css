@@ -24,16 +24,12 @@
 
 /* line 28, form.css.sass */
 .default .email_modal {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0 0 15px;
   -moz-box-shadow: rgba(0, 0, 0, 0.8) 0 0 15px;
   box-shadow: rgba(0, 0, 0, 0.8) 0 0 15px;
-  background: #cccccc;
-  border: 3px solid rgba(0, 0, 0, 0.3);
+  background: #fdfdfd;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  color: #555555;
   display: none;
   height: 200px;
   margin: auto;

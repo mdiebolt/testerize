@@ -135,18 +135,14 @@
     display: none; }
   /* line 128, templates/rojo.css.sass */
   .rojo .email_modal {
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-    border-radius: 5px;
     -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0 0 15px;
     -moz-box-shadow: rgba(0, 0, 0, 0.8) 0 0 15px;
     box-shadow: rgba(0, 0, 0, 0.8) 0 0 15px;
-    background: #eeeeee;
-    border: 3px solid rgba(0, 0, 0, 0.3);
+    background: white;
+    background-image: url(/images/plan_stripe.png);
+    border: 2px solid #a91d3b;
     display: none;
-    height: 180px;
+    height: 165px;
     margin: auto;
     padding: 1em;
     position: fixed;
@@ -158,34 +154,38 @@
     z-index: 500; }
     /* line 146, templates/rojo.css.sass */
     .rojo .email_modal button {
+      background-color: #a91d3b;
       padding-top: 5px; }
-  /* line 149, templates/rojo.css.sass */
+    /* line 150, templates/rojo.css.sass */
+    .rojo .email_modal input {
+      font-size: 13px; }
+  /* line 153, templates/rojo.css.sass */
   .rojo footer {
     margin: auto;
     width: 900px; }
-    /* line 153, templates/rojo.css.sass */
+    /* line 157, templates/rojo.css.sass */
     .rojo footer a {
       color: #333333; }
-      /* line 156, templates/rojo.css.sass */
+      /* line 160, templates/rojo.css.sass */
       .rojo footer a:active, .rojo footer a:visited {
         color: #444444; }
-      /* line 159, templates/rojo.css.sass */
+      /* line 163, templates/rojo.css.sass */
       .rojo footer a:hover {
         color: #666666; }
-    /* line 162, templates/rojo.css.sass */
+    /* line 166, templates/rojo.css.sass */
     .rojo footer p {
       display: inline-block;
       float: left; }
-    /* line 166, templates/rojo.css.sass */
+    /* line 170, templates/rojo.css.sass */
     .rojo footer .edit_toggle {
       float: right; }
-  /* line 169, templates/rojo.css.sass */
+  /* line 173, templates/rojo.css.sass */
   .rojo ul {
     list-style: none; }
-    /* line 172, templates/rojo.css.sass */
+    /* line 176, templates/rojo.css.sass */
     .rojo ul li {
       padding: 0.25em 0; }
-  /* line 175, templates/rojo.css.sass */
+  /* line 179, templates/rojo.css.sass */
   .rojo input {
     -moz-border-radius-topleft: 4px;
     -webkit-border-top-left-radius: 4px;
@@ -206,7 +206,7 @@
     padding: 0.6em;
     font-size: 14px;
     width: 200px; }
-  /* line 186, templates/rojo.css.sass */
+  /* line 190, templates/rojo.css.sass */
   .rojo button {
     -moz-border-radius-topright: 5px;
     -webkit-border-top-right-radius: 5px;
@@ -228,7 +228,7 @@
     letter-spacing: 0.1em;
     margin: 0;
     padding: 3px 1em 7px 1em; }
-    /* line 200, templates/rojo.css.sass */
+    /* line 204, templates/rojo.css.sass */
     .rojo button:active {
       -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 5px inset;
       -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 5px inset;
