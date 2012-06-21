@@ -1,78 +1,39 @@
-$('.edit').on 'keyup', '.title', ->
-  title = $(this).val()
+updateCopy = (markdownText, selector) ->
+  $(selector).html(markdown.toHTML(markdownText))
 
-  $('header .title').text(title)
-
-$('.edit').on 'keyup', '.paragraph1', ->
-  title = $(this).val()
-
-  $('.pitch .paragraph1').text(title)
-
-$('.edit').on 'keyup', '.paragraph2', ->
-  title = $(this).val()
-
-  $('.pitch .paragraph2').text(title)
-
-$('.edit').on 'keyup', '.paragraph2_header', ->
-  title = $(this).val()
-
-  $('.pitch .paragraph2_header').text(title)
-
-$('.edit').on 'keyup', '.paragraph3', ->
-  title = $(this).val()
-
-  $('.pitch .paragraph3').text(title)
-
-$('.edit').on 'keyup', '.paragraph3_header', ->
-  title = $(this).val()
-
-  $('.pitch .paragraph3_header').text(title)
-
-$('.edit').on 'keyup', '.basic_plan', ->
-  cost = $(this).val()
-
-  $('.pricing_option .basic_plan').text(cost)
-
-$('.edit').on 'keyup', '.basic_features', ->
-  features = $(this).val().split(',')
-
-  $('.pricing_option .basic_plan').next().empty()
+updateFeatures = (features, selector) ->
+  $(selector).next().empty()
 
   for feature in features
     li = "<li>#{feature}</li>"
 
-    $('.pricing_option .basic_plan').next().append(li)
+    $(selector).next().append(li)
 
-$('.edit').on 'keyup', '.professional_plan', ->
-  cost = $(this).val()
+contentMap =
+  '.edit .title': 'header .title'
+  '.edit .paragraph1': '.pitch .paragraph1'
+  '.edit .paragraph2': '.pitch .paragraph2'
+  '.edit .paragraph3': '.pitch .paragraph3'
+  '.edit .paragraph2_header': '.pitch .paragraph2_header'
+  '.edit .paragraph3_header': '.pitch .paragraph3_header'
+  '.edit .basic_plan': '.pricing_option .basic_plan'
+  '.edit .professional_plan': '.pricing_option .professional_plan'
+  '.edit .enterprise_plan': '.pricing_option .enterprise_plan'
 
-  $('.pricing_option .professional_plan').text(cost)
+featuresMap =
+  '.edit .basic_features': '.pricing_option .basic_plan'
+  '.edit .professional_features': '.pricing_option .professional_plan'
+  '.edit .enterprise_features': '.pricing_option .enterprise_plan'
 
-$('.edit').on 'keyup', '.professional_features', ->
-  features = $(this).val().split(',')
+$.each contentMap, (source, destination) ->
+  $(source).on 'keyup', (e) ->
+    updateCopy($(e.currentTarget).val(), destination)
 
-  $('.pricing_option .professional_plan').next().empty()
+$.each featuresMap, (source, destination) ->
+  $(source).on 'keyup', (e) ->
+    updateFeatures($(e.currentTarget).val().split(','), destination)
 
-  for feature in features
-    li = "<li>#{feature}</li>"
-
-    $('.pricing_option .professional_plan').next().append(li)
-
-$('.edit').on 'keyup', '.enterprise_plan', ->
-  cost = $(this).val()
-
-  $('.pricing_option .enterprise_plan').text(cost)
-
-$('.edit').on 'keyup', '.enterprise_features', ->
-  features = $(this).val().split(',')
-
-  $('.pricing_option .enterprise_plan').next().empty()
-
-  for feature in features
-    li = "<li>#{feature}</li>"
-
-    $('.pricing_option .enterprise_plan').next().append(li)
-
+# Toggle Edit
 $('footer').on 'click', '.edit_toggle', (e) ->
   e.preventDefault()
 
