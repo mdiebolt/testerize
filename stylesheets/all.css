@@ -706,7 +706,14 @@ html.default {
       /* line 119, templates/slate.css.sass */
       .slate footer a:hover {
         color: #666666; }
-  /* line 122, templates/slate.css.sass */
+    /* line 122, templates/slate.css.sass */
+    .slate footer p {
+      display: inline-block;
+      float: left; }
+    /* line 126, templates/slate.css.sass */
+    .slate footer .edit_toggle {
+      float: right; }
+  /* line 129, templates/slate.css.sass */
   .slate input {
     -moz-border-radius-topleft: 4px;
     -webkit-border-top-left-radius: 4px;
@@ -727,7 +734,7 @@ html.default {
     padding: 0.6em;
     font-size: 14px;
     width: 200px; }
-  /* line 133, templates/slate.css.sass */
+  /* line 140, templates/slate.css.sass */
   .slate button {
     -moz-border-radius-topright: 5px;
     -webkit-border-top-right-radius: 5px;
@@ -749,7 +756,7 @@ html.default {
     letter-spacing: 0.1em;
     margin: 0;
     padding: 3px 1em 7px 1em; }
-    /* line 147, templates/slate.css.sass */
+    /* line 154, templates/slate.css.sass */
     .slate button:active {
       -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 5px inset;
       -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 5px inset;
