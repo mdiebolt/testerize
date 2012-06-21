@@ -43,11 +43,13 @@
       margin: auto;
       width: 800px; }
   /* line 43, templates/slate.css.sass */
+  .slate .pitch {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3); }
+  /* line 46, templates/slate.css.sass */
   .slate section {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     margin: auto;
     width: 800px; }
-  /* line 48, templates/slate.css.sass */
+  /* line 50, templates/slate.css.sass */
   .slate .pricing_option {
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
@@ -61,27 +63,28 @@
     width: 250px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     margin-top: 1em;
-    margin-right: 14px;
+    margin-left: 6px;
+    margin-right: 6px;
     margin-bottom: 1em;
     background-color: white;
     padding: 0.5em;
     display: inline-block; }
-    /* line 62, templates/slate.css.sass */
+    /* line 65, templates/slate.css.sass */
     .slate .pricing_option:hover {
       background-color: #dddddd; }
-    /* line 65, templates/slate.css.sass */
+    /* line 68, templates/slate.css.sass */
     .slate .pricing_option:active {
       -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px inset;
       -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px inset;
       box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px inset; }
-    /* line 68, templates/slate.css.sass */
+    /* line 71, templates/slate.css.sass */
     .slate .pricing_option h3 {
       margin: 0;
       text-align: center; }
-    /* line 72, templates/slate.css.sass */
+    /* line 75, templates/slate.css.sass */
     .slate .pricing_option ul {
       padding-left: 1em; }
-  /* line 75, templates/slate.css.sass */
+  /* line 78, templates/slate.css.sass */
   .slate .overlay {
     display: none;
     position: fixed;
@@ -91,10 +94,10 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); }
-  /* line 85, templates/slate.css.sass */
+  /* line 88, templates/slate.css.sass */
   .slate .thanks_message {
     display: none; }
-  /* line 88, templates/slate.css.sass */
+  /* line 91, templates/slate.css.sass */
   .slate .email_modal {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -117,30 +120,30 @@
     right: 0;
     width: 275px;
     z-index: 500; }
-    /* line 106, templates/slate.css.sass */
+    /* line 109, templates/slate.css.sass */
     .slate .email_modal button {
       padding-top: 5px; }
-  /* line 109, templates/slate.css.sass */
+  /* line 112, templates/slate.css.sass */
   .slate footer {
     margin: auto;
     width: 800px; }
-    /* line 113, templates/slate.css.sass */
+    /* line 116, templates/slate.css.sass */
     .slate footer a {
       color: #333333; }
-      /* line 116, templates/slate.css.sass */
+      /* line 119, templates/slate.css.sass */
       .slate footer a:active, .slate footer a:visited {
         color: #444444; }
-      /* line 119, templates/slate.css.sass */
+      /* line 122, templates/slate.css.sass */
       .slate footer a:hover {
         color: #666666; }
-    /* line 122, templates/slate.css.sass */
+    /* line 125, templates/slate.css.sass */
     .slate footer p {
       display: inline-block;
       float: left; }
-    /* line 126, templates/slate.css.sass */
+    /* line 129, templates/slate.css.sass */
     .slate footer .edit_toggle {
       float: right; }
-  /* line 129, templates/slate.css.sass */
+  /* line 132, templates/slate.css.sass */
   .slate input {
     -moz-border-radius-topleft: 4px;
     -webkit-border-top-left-radius: 4px;
@@ -161,7 +164,7 @@
     padding: 0.6em;
     font-size: 14px;
     width: 200px; }
-  /* line 140, templates/slate.css.sass */
+  /* line 143, templates/slate.css.sass */
   .slate button {
     -moz-border-radius-topright: 5px;
     -webkit-border-top-right-radius: 5px;
@@ -183,7 +186,7 @@
     letter-spacing: 0.1em;
     margin: 0;
     padding: 3px 1em 7px 1em; }
-    /* line 154, templates/slate.css.sass */
+    /* line 157, templates/slate.css.sass */
     .slate button:active {
       -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 5px inset;
       -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 5px inset;
