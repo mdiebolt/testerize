@@ -20,7 +20,7 @@ contentMap =
   '.edit .professional_plan': '.pricing_option .professional_plan'
   '.edit .enterprise_plan': '.pricing_option .enterprise_plan'
 
-featuresMap =
+featureMap =
   '.edit .basic_features': '.pricing_option .basic_plan'
   '.edit .professional_features': '.pricing_option .professional_plan'
   '.edit .enterprise_features': '.pricing_option .enterprise_plan'
@@ -29,7 +29,7 @@ $.each contentMap, (source, destination) ->
   $(source).on 'keyup', (e) ->
     updateCopy($(e.currentTarget).val(), destination)
 
-$.each featuresMap, (source, destination) ->
+$.each featureMap, (source, destination) ->
   $(source).on 'keyup', (e) ->
     updateFeatures($(e.currentTarget).val().split(','), destination)
 
@@ -38,3 +38,11 @@ $('footer').on 'click', '.edit_toggle', (e) ->
   e.preventDefault()
 
   $('.edit').toggle()
+
+# Populate Edit form on load
+$ ->
+  $.each contentMap, (source, destination) ->
+    $(source).val($(destination).text().trim())
+
+  $.each featureMap, (source, destination) ->
+    $(source).val($(destination).next().text().trim().replace(/\n\s*/g, ', '))
