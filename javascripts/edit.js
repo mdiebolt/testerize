@@ -18,10 +18,22 @@
     return $('.pitch .paragraph2').text(title);
   });
 
+  $('.edit').on('keyup', '.paragraph2_header', function() {
+    var title;
+    title = $(this).val();
+    return $('.pitch .paragraph2_header').text(title);
+  });
+
   $('.edit').on('keyup', '.paragraph3', function() {
     var title;
     title = $(this).val();
     return $('.pitch .paragraph3').text(title);
+  });
+
+  $('.edit').on('keyup', '.paragraph3_header', function() {
+    var title;
+    title = $(this).val();
+    return $('.pitch .paragraph3_header').text(title);
   });
 
   $('.edit').on('keyup', '.basic_plan', function() {
