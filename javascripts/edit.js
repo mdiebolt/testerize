@@ -17,33 +17,59 @@
     return _results;
   };
 
-  contentMap = {
-    '.edit .title': 'header .title',
-    '.edit .paragraph1': '.pitch .paragraph1',
-    '.edit .paragraph2': '.pitch .paragraph2',
-    '.edit .paragraph3': '.pitch .paragraph3',
-    '.edit .paragraph2_header': '.pitch .paragraph2_header',
-    '.edit .paragraph3_header': '.pitch .paragraph3_header',
-    '.edit .basic_plan': '.pricing_option .basic_plan',
-    '.edit .professional_plan': '.pricing_option .professional_plan',
-    '.edit .enterprise_plan': '.pricing_option .enterprise_plan'
-  };
+  contentMap = [
+    {
+      source: '.edit .title',
+      destination: 'header .title'
+    }, {
+      source: '.edit .paragraph1',
+      destination: '.pitch .paragraph1'
+    }, {
+      source: '.edit .paragraph2',
+      destination: '.pitch .paragraph2'
+    }, {
+      source: '.edit .paragraph3',
+      destination: '.pitch .paragraph3'
+    }, {
+      source: '.edit .paragraph2_header',
+      destination: '.pitch .paragraph2_header'
+    }, {
+      source: '.edit .paragraph3_header',
+      destination: '.pitch .paragraph3_header'
+    }, {
+      source: '.edit .basic_plan',
+      destination: '.pricing_option .basic_plan'
+    }, {
+      source: '.edit .professional_plan',
+      destination: '.pricing_option .professional_plan'
+    }, {
+      source: '.edit .enterprise_plan',
+      destination: '.pricing_option .enterprise_plan'
+    }
+  ];
 
-  featureMap = {
-    '.edit .basic_features': '.pricing_option .basic_plan',
-    '.edit .professional_features': '.pricing_option .professional_plan',
-    '.edit .enterprise_features': '.pricing_option .enterprise_plan'
-  };
+  featureMap = [
+    {
+      source: '.edit .basic_features',
+      destination: '.pricing_option .basic_plan'
+    }, {
+      source: '.edit .professional_features',
+      destination: '.pricing_option .professional_plan'
+    }, {
+      source: '.edit .enterprise_features',
+      destination: '.pricing_option .enterprise_plan'
+    }
+  ];
 
-  $.each(contentMap, function(source, destination) {
-    return $(source).on('keyup', function(e) {
-      return updateCopy($(e.currentTarget).val(), destination);
+  contentMap.each(function(obj) {
+    return $(obj.source).on('keyup', function(e) {
+      return updateCopy($(e.currentTarget).val(), obj.destination);
     });
   });
 
-  $.each(featureMap, function(source, destination) {
-    return $(source).on('keyup', function(e) {
-      return updateFeatures($(e.currentTarget).val().split(','), destination);
+  featureMap.each(function(obj) {
+    return $(obj.source).on('keyup', function(e) {
+      return updateFeatures($(e.currentTarget).val().split(','), obj.destination);
     });
   });
 
@@ -53,11 +79,11 @@
   });
 
   $(function() {
-    $.each(contentMap, function(source, destination) {
-      return $(source).val($(destination).text().trim());
+    contentMap.each(function(obj) {
+      return $(obj.source).val($(obj.destination).text().trim().replace(/\n\s*/g, ' '));
     });
-    return $.each(featureMap, function(source, destination) {
-      return $(source).val($(destination).next().text().trim().replace(/\n\s*/g, ', '));
+    return featureMap.each(function(obj) {
+      return $(obj.source).val($(obj.destination).next().text().trim().replace(/\n\s*/g, ', '));
     });
   });
 

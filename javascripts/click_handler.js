@@ -1,12 +1,15 @@
 (function() {
 
   $(function() {
-    var closeModal, openModal, template, thanks, toggleModal;
-    if ((template = window.location.search.split('=')[1]) != null) {
-      $('html').addClass("" + template);
-    } else {
-      $('html').addClass('default');
-    }
+    var closeModal, openModal, thanks, toggleModal;
+    window.params = location.search.split("?").last().split("&").eachWithObject({}, function(item, obj) {
+      var key, val, _ref;
+      _ref = item.split("="), key = _ref[0], val = _ref[1];
+      if (key !== '') {
+        return obj[key] = val;
+      }
+    });
+    $('html').addClass(params.template || 'default');
     openModal = function() {
       return toggleModal(true);
     };
