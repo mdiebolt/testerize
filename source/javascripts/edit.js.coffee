@@ -13,10 +13,20 @@ $('.edit').on 'keyup', '.paragraph2', ->
 
   $('.pitch .paragraph2').text(title)
 
+$('.edit').on 'keyup', '.paragraph2_header', ->
+  title = $(this).val()
+
+  $('.pitch .paragraph2_header').text(title)
+
 $('.edit').on 'keyup', '.paragraph3', ->
   title = $(this).val()
 
   $('.pitch .paragraph3').text(title)
+
+$('.edit').on 'keyup', '.paragraph3_header', ->
+  title = $(this).val()
+
+  $('.pitch .paragraph3_header').text(title)
 
 $('.edit').on 'keyup', '.basic_plan', ->
   cost = $(this).val()
