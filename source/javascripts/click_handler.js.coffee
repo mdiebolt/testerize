@@ -1,8 +1,10 @@
 $ ->
-  if (template = window.location.search.split('=')[1])?
-    $('html').addClass("#{template}")
-  else
-    $('html').addClass('default')
+  window.params = location.search.split("?").last().split("&").eachWithObject {}, (item, obj) ->
+    [key, val] = item.split("=")
+
+    obj[key] = val unless key is ''
+
+  $('html').addClass params.template || 'default'
 
   openModal = ->
     toggleModal(true)
