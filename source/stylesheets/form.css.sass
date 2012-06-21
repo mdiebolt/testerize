@@ -1,5 +1,28 @@
 @import compass
 
+$edit_width: 185px
+
+.edit
+  display: none
+  position: absolute
+  top: 50px
+  left: 0
+  width: $edit_width
+
+  input, textarea
+    +box-sizing(border-box)
+
+    max-width: $edit_width
+    width: $edit_width
+
+  input.title
+    border-right: 2px solid rgba(0, 0, 0, 0.3)
+    width: $edit_width
+
+  textarea
+    display: block
+    height: 100px
+
 .default
   .email_modal
     +border-radius(5px)

@@ -1,27 +1,42 @@
+.edit
+  %input.title(type='text' placeholder='Title')
+  %textarea.paragraph1(placeholder='Paragraph 1')
+  %textarea.paragraph2(placeholder='Paragraph 2')
+  %textarea.paragraph3(placeholder='Paragraph 3')
+
+  %input.basic_plan(type='text' placeholder='Basic - $50 / month')
+  %input.basic_features(type='text' placeholder='Basic features')
+
+  %input.professional_plan(type='text' placeholder='Professional - $250 / month')
+  %input.professional_features(type='text' placeholder='Professional features')
+
+  %input.enterprise_plan(type='text' placeholder='Enterprise - Contact us')
+  %input.enterprise_features(type='text' placeholder='Enterprise features')
+
 %header
-  %h1 Testerize - Rapid Market Discovery
+  %h1.title Testerize - Rapid Market Discovery
   .radical
   .findOut
 
 %section.pitch
-  %p
+  %p.paragraph1
     Discover who will purchase a potential product! Developing products is expensive, so find out if your product will be successful before you make a big investment. With Testerize you can test your product idea while simultaneously generating leads that will become your first customers.
 
   %h2
     How it works
 
-  %p
+  %p.paragraph2
     When you use Testerize you will go from "idea" to "fully functional landing page" in less than 5 minutes. Fill out a simple form and Testerize will create your very own optimized landing page. Testerize tracks consumer demand while collecting contact information for interested customers. At the end of our one week process you will know more about your target market than most companies ever do.
 
   %h2
     Gain Market Insights First
 
-  %p
+  %p.paragraph3
     Many companies will spend millions of dollars developing a product, only to find out that nobody wants it. We believe that it is far better to find out the market truth first. Explore new product lines quickly. The faster you locate demand the bigger your money making advantage becomes.
 
 %section
   .pricing_option(data-price=50)
-    %h3
+    %h3.basic_plan
       Basic -
       %i $50 / month
     %ul
@@ -30,7 +45,7 @@
       %li Quality Lead Generation
 
   .pricing_option(data-price=250)
-    %h3
+    %h3.professional_plan
       Professional -
       %i $250 / month
     %ul
@@ -39,7 +54,7 @@
       %li Automatic funnel optimization
 
   .pricing_option(data-price=1000)
-    %h3
+    %h3.enterprise_plan
       Enterprise -
       %i Contact us
     %ul
@@ -48,9 +63,11 @@
       %li Full market analysis report
 
 %footer
-  %p
+  %p.owner
     Brought to you by
     %a(href="http://pixieengine.com") PixieEngine
+  %p.edit_toggle
+    %a(href='#') Edit Copy
 
   .overlay
   .email_modal
