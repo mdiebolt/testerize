@@ -4798,6 +4798,9 @@ Generate a random uuid.
         return openModal();
       }
     });
+    $('.templates a').on('click', function(e) {
+      return $('html').attr('class', $(this).attr('class'));
+    });
     $('.findOut, .radical').on('click', function(e) {
       return openModal();
     });
