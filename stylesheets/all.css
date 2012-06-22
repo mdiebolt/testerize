@@ -679,6 +679,7 @@ html.default {
     background-image: url(/images/plan_stripe.png);
     cursor: pointer;
     width: 278px;
+    height: 165px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     margin-top: 1em;
     margin-right: 6px;
@@ -686,17 +687,18 @@ html.default {
     margin-bottom: 1em;
     background-color: white;
     padding: 0;
-    display: inline-block; }
-    /* line 97, templates/rojo.css.sass */
+    display: inline-block;
+    vertical-align: top; }
+    /* line 99, templates/rojo.css.sass */
     .rojo .pricing_option:hover {
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
       opacity: 0.7; }
-    /* line 100, templates/rojo.css.sass */
+    /* line 102, templates/rojo.css.sass */
     .rojo .pricing_option:active {
       -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px inset;
       -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px inset;
       box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px inset; }
-    /* line 103, templates/rojo.css.sass */
+    /* line 105, templates/rojo.css.sass */
     .rojo .pricing_option h3 {
       text-shadow: rgba(0, 0, 0, 0.3) 1px 1px;
       background-color: #a91d3b;
@@ -704,10 +706,10 @@ html.default {
       text-align: center;
       color: white;
       padding: 0.25em; }
-    /* line 112, templates/rojo.css.sass */
+    /* line 114, templates/rojo.css.sass */
     .rojo .pricing_option ul {
       padding-left: 0.5em; }
-  /* line 115, templates/rojo.css.sass */
+  /* line 117, templates/rojo.css.sass */
   .rojo .overlay {
     display: none;
     position: fixed;
@@ -717,10 +719,10 @@ html.default {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); }
-  /* line 125, templates/rojo.css.sass */
+  /* line 127, templates/rojo.css.sass */
   .rojo .thanks_message {
     display: none; }
-  /* line 128, templates/rojo.css.sass */
+  /* line 130, templates/rojo.css.sass */
   .rojo .email_modal {
     -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0 0 15px;
     -moz-box-shadow: rgba(0, 0, 0, 0.8) 0 0 15px;
@@ -739,41 +741,41 @@ html.default {
     right: 0;
     width: 275px;
     z-index: 500; }
-    /* line 146, templates/rojo.css.sass */
+    /* line 148, templates/rojo.css.sass */
     .rojo .email_modal button {
       background-color: #a91d3b;
       padding-top: 5px; }
-    /* line 150, templates/rojo.css.sass */
+    /* line 152, templates/rojo.css.sass */
     .rojo .email_modal input {
       font-size: 13px; }
-  /* line 153, templates/rojo.css.sass */
+  /* line 155, templates/rojo.css.sass */
   .rojo footer {
     margin: auto;
     width: 900px; }
-    /* line 157, templates/rojo.css.sass */
+    /* line 159, templates/rojo.css.sass */
     .rojo footer a {
       color: #333333; }
-      /* line 160, templates/rojo.css.sass */
+      /* line 162, templates/rojo.css.sass */
       .rojo footer a:active, .rojo footer a:visited {
         color: #444444; }
-      /* line 163, templates/rojo.css.sass */
+      /* line 165, templates/rojo.css.sass */
       .rojo footer a:hover {
         color: #666666; }
-    /* line 166, templates/rojo.css.sass */
+    /* line 168, templates/rojo.css.sass */
     .rojo footer p {
       display: inline-block;
       float: left; }
-    /* line 170, templates/rojo.css.sass */
+    /* line 172, templates/rojo.css.sass */
     .rojo footer .edit_toggle {
       float: right; }
-  /* line 173, templates/rojo.css.sass */
+  /* line 175, templates/rojo.css.sass */
   .rojo ul {
     list-style: none; }
-    /* line 176, templates/rojo.css.sass */
+    /* line 178, templates/rojo.css.sass */
     .rojo ul li {
       padding: 0.25em 0; }
-  /* line 179, templates/rojo.css.sass */
-  .rojo input {
+  /* line 181, templates/rojo.css.sass */
+  .rojo input.email {
     -moz-border-radius-topleft: 4px;
     -webkit-border-top-left-radius: 4px;
     -ms-border-top-left-radius: 4px;
@@ -791,9 +793,9 @@ html.default {
     border-right: 1px solid rgba(0, 0, 0, 0.3);
     display: inline;
     padding: 0.6em;
-    font-size: 14px;
+    font-size: 13px;
     width: 200px; }
-  /* line 190, templates/rojo.css.sass */
+  /* line 192, templates/rojo.css.sass */
   .rojo button {
     -moz-border-radius-topright: 5px;
     -webkit-border-top-right-radius: 5px;
@@ -815,7 +817,7 @@ html.default {
     letter-spacing: 0.1em;
     margin: 0;
     padding: 3px 1em 7px 1em; }
-    /* line 204, templates/rojo.css.sass */
+    /* line 206, templates/rojo.css.sass */
     .rojo button:active {
       -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 5px inset;
       -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 5px inset;
@@ -883,6 +885,7 @@ html.default {
     box-sizing: border-box;
     cursor: pointer;
     width: 250px;
+    height: 200px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     margin-top: 1em;
     margin-left: 6px;
@@ -890,23 +893,24 @@ html.default {
     margin-bottom: 1em;
     background-color: white;
     padding: 0.5em;
-    display: inline-block; }
-    /* line 65, templates/slate.css.sass */
+    display: inline-block;
+    vertical-align: top; }
+    /* line 67, templates/slate.css.sass */
     .slate .pricing_option:hover {
       background-color: #dddddd; }
-    /* line 68, templates/slate.css.sass */
+    /* line 70, templates/slate.css.sass */
     .slate .pricing_option:active {
       -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px inset;
       -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px inset;
       box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px inset; }
-    /* line 71, templates/slate.css.sass */
+    /* line 73, templates/slate.css.sass */
     .slate .pricing_option h3 {
       margin: 0;
       text-align: center; }
-    /* line 75, templates/slate.css.sass */
+    /* line 77, templates/slate.css.sass */
     .slate .pricing_option ul {
       padding-left: 1em; }
-  /* line 78, templates/slate.css.sass */
+  /* line 80, templates/slate.css.sass */
   .slate .overlay {
     display: none;
     position: fixed;
@@ -916,10 +920,10 @@ html.default {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); }
-  /* line 88, templates/slate.css.sass */
+  /* line 90, templates/slate.css.sass */
   .slate .thanks_message {
     display: none; }
-  /* line 91, templates/slate.css.sass */
+  /* line 93, templates/slate.css.sass */
   .slate .email_modal {
     -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0 0 15px;
     -moz-box-shadow: rgba(0, 0, 0, 0.8) 0 0 15px;
@@ -937,31 +941,31 @@ html.default {
     right: 0;
     width: 275px;
     z-index: 500; }
-    /* line 108, templates/slate.css.sass */
+    /* line 110, templates/slate.css.sass */
     .slate .email_modal button {
       padding-top: 5px; }
-  /* line 111, templates/slate.css.sass */
+  /* line 113, templates/slate.css.sass */
   .slate footer {
     margin: auto;
     width: 800px; }
-    /* line 115, templates/slate.css.sass */
+    /* line 117, templates/slate.css.sass */
     .slate footer a {
       color: #333333; }
-      /* line 118, templates/slate.css.sass */
+      /* line 120, templates/slate.css.sass */
       .slate footer a:active, .slate footer a:visited {
         color: #444444; }
-      /* line 121, templates/slate.css.sass */
+      /* line 123, templates/slate.css.sass */
       .slate footer a:hover {
         color: #666666; }
-    /* line 124, templates/slate.css.sass */
+    /* line 126, templates/slate.css.sass */
     .slate footer p {
       display: inline-block;
       float: left; }
-    /* line 128, templates/slate.css.sass */
+    /* line 130, templates/slate.css.sass */
     .slate footer .edit_toggle {
       float: right; }
-  /* line 131, templates/slate.css.sass */
-  .slate input {
+  /* line 133, templates/slate.css.sass */
+  .slate input.email {
     -moz-border-radius-topleft: 4px;
     -webkit-border-top-left-radius: 4px;
     -ms-border-top-left-radius: 4px;
@@ -981,7 +985,7 @@ html.default {
     padding: 0.6em;
     font-size: 14px;
     width: 200px; }
-  /* line 142, templates/slate.css.sass */
+  /* line 144, templates/slate.css.sass */
   .slate button {
     -moz-border-radius-topright: 5px;
     -webkit-border-top-right-radius: 5px;
@@ -1003,7 +1007,7 @@ html.default {
     letter-spacing: 0.1em;
     margin: 0;
     padding: 3px 1em 7px 1em; }
-    /* line 156, templates/slate.css.sass */
+    /* line 158, templates/slate.css.sass */
     .slate button:active {
       -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 5px inset;
       -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 5px inset;

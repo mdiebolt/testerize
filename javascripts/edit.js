@@ -73,11 +73,6 @@
     });
   });
 
-  $('footer').on('click', '.edit_toggle', function(e) {
-    e.preventDefault();
-    return $('.edit').toggle();
-  });
-
   $(function() {
     contentMap.each(function(obj) {
       return $(obj.source).val($(obj.destination).text().trim().replace(/\n\s*/g, ' '));
