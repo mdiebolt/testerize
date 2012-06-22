@@ -37,6 +37,9 @@ $ ->
     else
       openModal()
 
+  $('.templates a').on 'click', (e) ->
+    $('html').attr('class', $(this).attr('class'))
+
   $('.findOut, .radical').on 'click', (e) ->
     openModal()
 
