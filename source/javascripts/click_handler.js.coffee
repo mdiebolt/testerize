@@ -21,7 +21,7 @@ $ ->
 
     obj[key] = val unless key is ''
 
-  $('html').addClass params.template || 'default'
+  $('html').addClass(params.template || 'default')
   $('.edit').toggle(params.edit?)
 
   $('.overlay').on 'click', (e) ->
