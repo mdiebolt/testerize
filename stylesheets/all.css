@@ -23,6 +23,11 @@
     height: 115px; }
 
 /* line 28, form.css.sass */
+.pricing_option form {
+  margin: auto;
+  width: 107px; }
+
+/* line 33, form.css.sass */
 .default .email_modal {
   -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0 0 15px;
   -moz-box-shadow: rgba(0, 0, 0, 0.8) 0 0 15px;
@@ -41,10 +46,10 @@
   right: 0;
   width: 275px;
   z-index: 500; }
-  /* line 46, form.css.sass */
+  /* line 51, form.css.sass */
   .default .email_modal button {
     padding-top: 5px; }
-/* line 49, form.css.sass */
+/* line 54, form.css.sass */
 .default .overlay {
   display: none;
   position: fixed;
@@ -54,8 +59,8 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5); }
-/* line 59, form.css.sass */
-.default input {
+/* line 64, form.css.sass */
+.default input.email {
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
   -ms-border-top-left-radius: 4px;
@@ -75,7 +80,7 @@
   padding: 0.6em;
   font-size: 14px;
   width: 200px; }
-/* line 70, form.css.sass */
+/* line 75, form.css.sass */
 .default button {
   -moz-border-radius-topright: 5px;
   -webkit-border-top-right-radius: 5px;
@@ -97,7 +102,7 @@
   letter-spacing: 0.1em;
   margin: 0;
   padding: 3px 1em 7px 1em; }
-  /* line 84, form.css.sass */
+  /* line 89, form.css.sass */
   .default button:active {
     -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 5px inset;
     -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 5px inset;
