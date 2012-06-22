@@ -1,40 +1,43 @@
+openModal = ->
+  toggleModal true
+
+closeModal = ->
+  toggleModal false
+
+toggleModal = (val) ->
+  $('.email_modal').toggle(val)
+  $('.overlay').toggle(val)
+
+thanks = ->
+  $('.thanks_message').show()
+
+  setTimeout ->
+    $('.thanks_message').fadeOut 200
+  , 3000
+
 $ ->
   window.params = location.search.split("?").last().split("&").eachWithObject {}, (item, obj) ->
-    [key, val] = item.split("=")
+    [key, val] = item.split '='
 
     obj[key] = val unless key is ''
 
   $('html').addClass params.template || 'default'
-
-  openModal = ->
-    toggleModal(true)
-
-  closeModal = ->
-    toggleModal(false)
-
-  toggleModal = (val) ->
-    $('.email_modal').toggle(val)
-    $('.overlay').toggle(val)
-
-  thanks = ->
-    $('.thanks_message').show()
-
-    setTimeout ->
-      $('.thanks_message').fadeOut(200)
-    , 3000
+  $('.edit').toggle(params.edit?)
 
   $('.overlay').on 'click', (e) ->
     closeModal()
 
   $('.pricing_option').on 'mousedown', (e) ->
-    $(e.currentTarget).attr 'class', 'pricing_option active'
     $('.email_modal input').attr('data-price', $(e.currentTarget).data('price'))
 
-  $('.pricing_option').on 'mouseup', (e) ->
-    $(e.currentTarget).attr 'class', 'pricing_option'
-    openModal()
+    return if $(e.currentTarget).is('form input[type="image"]')
 
-  $(".findOut, .radical").click ->
+    if (paypalButton = $(e.currentTarget).find('form input[type="image"]')).length
+      paypalButton.click()
+    else
+      openModal()
+
+  $('.findOut, .radical').on 'click', (e) ->
     openModal()
 
   $('.track_email').on 'click', (e) ->

@@ -35,12 +35,6 @@ featureMap.each (obj) ->
   $(obj.source).on 'keyup', (e) ->
     updateFeatures($(e.currentTarget).val().split(','), obj.destination)
 
-# Toggle Edit
-$('footer').on 'click', '.edit_toggle', (e) ->
-  e.preventDefault()
-
-  $('.edit').toggle()
-
 # Populate Edit form on load
 $ ->
   contentMap.each (obj) ->
