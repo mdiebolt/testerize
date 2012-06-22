@@ -885,8 +885,9 @@ html.default {
     box-sizing: border-box;
     cursor: pointer;
     width: 250px;
-    height: 200px;
+    height: 155px;
     border: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 14px;
     margin-top: 1em;
     margin-left: 6px;
     margin-right: 6px;
@@ -895,22 +896,26 @@ html.default {
     padding: 0.5em;
     display: inline-block;
     vertical-align: top; }
-    /* line 67, templates/slate.css.sass */
+    /* line 68, templates/slate.css.sass */
     .slate .pricing_option:hover {
       background-color: #dddddd; }
-    /* line 70, templates/slate.css.sass */
+    /* line 71, templates/slate.css.sass */
     .slate .pricing_option:active {
       -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px inset;
       -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px inset;
       box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px inset; }
-    /* line 73, templates/slate.css.sass */
+    /* line 74, templates/slate.css.sass */
     .slate .pricing_option h3 {
       margin: 0;
       text-align: center; }
-    /* line 77, templates/slate.css.sass */
+    /* line 78, templates/slate.css.sass */
     .slate .pricing_option ul {
       padding-left: 1em; }
-  /* line 80, templates/slate.css.sass */
+      /* line 81, templates/slate.css.sass */
+      .slate .pricing_option ul li {
+        margin-top: 0.25em;
+        margin-bottom: 0.25em; }
+  /* line 85, templates/slate.css.sass */
   .slate .overlay {
     display: none;
     position: fixed;
@@ -920,10 +925,10 @@ html.default {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); }
-  /* line 90, templates/slate.css.sass */
+  /* line 95, templates/slate.css.sass */
   .slate .thanks_message {
     display: none; }
-  /* line 93, templates/slate.css.sass */
+  /* line 98, templates/slate.css.sass */
   .slate .email_modal {
     -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0 0 15px;
     -moz-box-shadow: rgba(0, 0, 0, 0.8) 0 0 15px;
@@ -941,30 +946,30 @@ html.default {
     right: 0;
     width: 275px;
     z-index: 500; }
-    /* line 110, templates/slate.css.sass */
+    /* line 115, templates/slate.css.sass */
     .slate .email_modal button {
       padding-top: 5px; }
-  /* line 113, templates/slate.css.sass */
+  /* line 118, templates/slate.css.sass */
   .slate footer {
     margin: auto;
     width: 800px; }
-    /* line 117, templates/slate.css.sass */
+    /* line 122, templates/slate.css.sass */
     .slate footer a {
       color: #333333; }
-      /* line 120, templates/slate.css.sass */
+      /* line 125, templates/slate.css.sass */
       .slate footer a:active, .slate footer a:visited {
         color: #444444; }
-      /* line 123, templates/slate.css.sass */
+      /* line 128, templates/slate.css.sass */
       .slate footer a:hover {
         color: #666666; }
-    /* line 126, templates/slate.css.sass */
+    /* line 131, templates/slate.css.sass */
     .slate footer p {
       display: inline-block;
       float: left; }
-    /* line 130, templates/slate.css.sass */
+    /* line 135, templates/slate.css.sass */
     .slate footer .edit_toggle {
       float: right; }
-  /* line 133, templates/slate.css.sass */
+  /* line 138, templates/slate.css.sass */
   .slate input.email {
     -moz-border-radius-topleft: 4px;
     -webkit-border-top-left-radius: 4px;
@@ -985,7 +990,7 @@ html.default {
     padding: 0.6em;
     font-size: 14px;
     width: 200px; }
-  /* line 144, templates/slate.css.sass */
+  /* line 149, templates/slate.css.sass */
   .slate button {
     -moz-border-radius-topright: 5px;
     -webkit-border-top-right-radius: 5px;
@@ -1007,7 +1012,7 @@ html.default {
     letter-spacing: 0.1em;
     margin: 0;
     padding: 3px 1em 7px 1em; }
-    /* line 158, templates/slate.css.sass */
+    /* line 163, templates/slate.css.sass */
     .slate button:active {
       -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 5px inset;
       -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 5px inset;
