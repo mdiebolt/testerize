@@ -4818,22 +4818,10 @@ Generate a random uuid.
 
 }).call(this);
 (function() {
-  var contentMap, featureMap, updateCopy, updateFeatures;
+  var contentMap, updateCopy;
 
-  updateCopy = function(markdownText, selector) {
-    return $(selector).html(markdown.toHTML(markdownText));
-  };
-
-  updateFeatures = function(features, selector) {
-    var feature, li, _i, _len, _results;
-    $(selector).next().empty();
-    _results = [];
-    for (_i = 0, _len = features.length; _i < _len; _i++) {
-      feature = features[_i];
-      li = "<li>" + feature + "</li>";
-      _results.push($(selector).next().append(li));
-    }
-    return _results;
+  updateCopy = function(html, selector) {
+    return $(selector).html(html);
   };
 
   contentMap = [
@@ -4864,40 +4852,34 @@ Generate a random uuid.
     }, {
       source: '.edit .enterprise_plan',
       destination: '.pricing_option .enterprise_plan'
-    }
-  ];
-
-  featureMap = [
-    {
+    }, {
       source: '.edit .basic_features',
-      destination: '.pricing_option .basic_plan'
+      destination: '.pricing_option .basic_features'
     }, {
       source: '.edit .professional_features',
-      destination: '.pricing_option .professional_plan'
+      destination: '.pricing_option .professional_features'
     }, {
       source: '.edit .enterprise_features',
-      destination: '.pricing_option .enterprise_plan'
+      destination: '.pricing_option .enterprise_features'
     }
   ];
 
   contentMap.each(function(obj) {
     return $(obj.source).on('keyup', function(e) {
-      return updateCopy($(e.currentTarget).val(), obj.destination);
-    });
-  });
-
-  featureMap.each(function(obj) {
-    return $(obj.source).on('keyup', function(e) {
-      return updateFeatures($(e.currentTarget).val().split(','), obj.destination);
+      var amount, plans;
+      updateCopy($(e.currentTarget).val(), obj.destination);
+      plans = ['.pricing_option .basic_plan', '.pricing_option .professional_plan', '.pricing_option .enterprise_plan'];
+      if (plans.include(obj.destination)) {
+        if (amount = $(e.currentTarget).val().match(/\d+/).first()) {
+          return $(obj.destination).parent().attr('data-price', amount);
+        }
+      }
     });
   });
 
   $(function() {
-    contentMap.each(function(obj) {
-      return $(obj.source).val($(obj.destination).text().trim().replace(/\n\s*/g, ' '));
-    });
-    return featureMap.each(function(obj) {
-      return $(obj.source).val($(obj.destination).next().text().trim().replace(/\n\s*/g, ', '));
+    return contentMap.each(function(obj) {
+      return $(obj.source).val($(obj.destination).html().trim().replace(/\n\s*/g, ' '));
     });
   });
 
